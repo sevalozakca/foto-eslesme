@@ -54,10 +54,18 @@ function kartTiklama(olay) {
         return;
     }
 
-    //Tıklanan ve açılan karta tekrar tıklanırsa işlem yapmayacağız.
-    if (secilenKart.classList.contains("acik") === true) {
+ /*    // Tıklanan ve açılan karta tekrar tıklanırsa işlem yapmayacağız.
+     if (secilenKart.classList.contains("acik") === true) {
         return;
     }
+ */
+    // Tıklanan ve açılan karta tekrar tıklanırsa resmi kapatacağız.
+    if (secilenKart.classList.contains("acik") === true) {
+        secilenKart.classList.remove("acik");
+        return;
+    }
+
+
 
     //Peşpeşe kartlara tıklandığında 2'den fazla kart tıklanmasını engellememiz gerekiyor.
     const tumAcikKartlar = document.querySelectorAll(".acik");
@@ -102,12 +110,22 @@ function kartTiklama(olay) {
             Görev 1: Kullanıcı 4 kartı da eşleştirdiğinde sayfa ortasında beliren hareketli gif dosyası formatında bir kutlama görseli belirsin ve bu fotoğraf 5 saniye sonra ortadan kaybolsun.
         */
        if(puan==4){
+
+      setTimeout(function(){
+
         document.getElementById("oyun-cerceve").style.display="none"
         document.getElementById("puan").style.display="none"
 
-        document.querySelector(".gif-container").style.display="inline"
-        document.getElementById("buton").style.display="inline"
-        return;
+        document.querySelector(".gif-container").style.display="block"
+        document.getElementById("buton").style.display="block";
+
+        // setTimeout(function(){
+        //     document.querySelector(".gif-container").style.display="none";
+        //     document.getElementById("buton").style.display="none";
+        //     location.reload();
+        // }, 5000);
+      }, 1000);
+
        }
 
 
