@@ -101,6 +101,14 @@ function kartTiklama(olay) {
       /*
             Görev 1: Kullanıcı 4 kartı da eşleştirdiğinde sayfa ortasında beliren hareketli gif dosyası formatında bir kutlama görseli belirsin ve bu fotoğraf 5 saniye sonra ortadan kaybolsun.
         */
+       if(puan==4){
+        document.getElementById("oyun-cerceve").style.display="none"
+        document.getElementById("puan").style.display="none"
+
+        document.querySelector(".gif-container").style.display="inline"
+        document.getElementById("buton").style.display="inline"
+        return;
+       }
 
 
       acikKart.classList.remove("acik");

@@ -40,3 +40,35 @@ div#oyun-cerceve {
   .kart-arkayuz {
     transform: rotateY(180deg);
   }
+
+  .gif-container {
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    display: none;
+  }
+
+  .gif-container img {
+    width: 100%;
+    height: auto;
+    animation: slide 5s infinite;}
+
+    @keyframes slide {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }}
+
+        #buton {
+            display: none;
+            margin-top: 508px; 
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
