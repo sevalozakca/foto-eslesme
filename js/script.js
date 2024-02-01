@@ -29,10 +29,40 @@ let randomNum = function(){
 /*
 Görev 2: Bu numaraları 1-99 arası(1 ve 99 dahil) sayılardan rastgele 4 çift oluşturacak şekilde üreten bir fonksiyon yazarak, kod bloğundaki array değerini bu fonksiyondan dönen array ile değiştiren kodları yazın
 */
-const fotoNumaralari = [10, 20, 30, 20, 10, 40, 40, 30];
+// const fotoNumaralari = [10, 20, 30, 20, 10, 40, 40, 30];
 
 
-console.log(fotoNumaralari);
+// console.log(fotoNumaralari);
+
+
+
+function rastgeleOlustur(){
+    const ilkDize=[];
+    for(var i=0; i<4; i++){
+        ilkDize.push(Math.floor(Math.random() * 99) + 1);
+    }
+    return ilkDize;
+}
+
+function karistir(ilkDize){
+    const ikinciDize=[];
+  for(let i=0; ilkDize.length; i++){
+    const yeniIndex=(i+2)%ilkDize.length;
+    ikinciDize[yeniIndex]=ilkDize[i];
+  }  
+  return ikinciDize;
+}
+
+const ilkDize = rastgeleOlustur();
+const ikinciDize = karistir(ilkDize);
+
+const fotoNumaralari = ikinciDize;
+
+
+
+
+
+
 
 for (fotoNumara of fotoNumaralari) {
     const yenikart = document.createElement("div");
