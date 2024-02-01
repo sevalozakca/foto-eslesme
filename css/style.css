@@ -4,6 +4,17 @@ div#oyun-cerceve {
     gap: 1rem;
 }
 
+.container{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+
 .kart {
     background-color: transparent;
     width: 100px;
@@ -67,7 +78,7 @@ div#oyun-cerceve {
 
         #buton {
             display: none;
-            margin-top: 508px; 
+            margin-top: -171px; 
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
